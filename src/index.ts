@@ -1,8 +1,6 @@
 import http from 'node:http';
 import * as si from 'systeminformation';
 
-const PORT = process.env.PORT || 3000;
-
 export interface ISystemInformation {
   cpu: si.Systeminformation.CpuData;
   system: si.Systeminformation.SystemData;
