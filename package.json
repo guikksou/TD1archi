@@ -1,5 +1,5 @@
 {
-  "name": "i-want-typescript",
+  "name": "TD1archi",
   "version": "1.0.0",
   "description": "📜 Template repository for a new Node.js TypeScript project linted using ESLint with Prettier",
   "main": "dist/index.js",
@@ -21,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khannurien/i-want-typescript.git"
+    "url": "git+https://github.com/guikksou/TD1archi.git"
   },
   "author": "Vincent Lannurien",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khannurien/i-want-typescript/issues"
+    "url": "https://github.com/guikksou/TD1archi/issues"
   },
-  "homepage": "https://github.com/khannurien/i-want-typescript#readme",
+  "homepage": "https://github.com/guikksou/TD1archi",
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.12.0",
