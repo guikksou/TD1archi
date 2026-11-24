@@ -40,7 +40,7 @@ export const server = http.createServer(async (req, res) => {
   } else {
     // Route non trouvée (404)
     res.writeHead(404, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ error: "Qu'est ce que tu cherches ici toi (je test mon workflow la)" }));
+    res.end(JSON.stringify({ error: "Qu'est ce que tu cherches ici toi je test mon workflow la" }));
   }
 });
 
