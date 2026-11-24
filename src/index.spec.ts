@@ -21,7 +21,7 @@ describe('aPI System Information (sans mocks)', () => {
     const response = await request(server).get('/route-inconnue').expect(404);
 
     expect(response.body).toStrictEqual({
-      error: "Qu'est ce que tu cherches ici toi",
+      error: "Qu'est ce que tu cherches ici toi je test mon workflow la",
     });
   });
 });
