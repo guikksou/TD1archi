@@ -38,4 +38,7 @@ jobs:
         run: |
           docker tag ${{ secrets.DOCKER_USERNAME }}/sysinfo-api:0.0.1 ghcr.io/${{ github.repository_owner }}/sysinfo-api:0.0.1
           docker push ghcr.io/${{ github.repository_owner }}/sysinfo-api:0.0.1
-      
+      - name: deploy to Azure Web App
+        env:
+          AZURE_WEBHOOK_URL: ${{ secrets.AZURE_WEBHOOK_URL }}
+        run: curl -fsS -X POST "$AZURE_WEBHOOK_URL"
