@@ -1,8 +1,13 @@
 name: github deuxieme workflow
 run-name: ${{ github.actor }} run le deuxième workflow pour construire l'image docker et le publier !
-on: [push]
+on:
+  workflow_run:
+    workflows: ["GitHub Actions Demo"]
+    types:
+      - completed
 jobs:
   build-and-publish-docker-image:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -10,6 +15,8 @@ jobs:
     steps: 
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
       - name: build docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/sysinfo-api:0.0.1 .
       - name: docker login
